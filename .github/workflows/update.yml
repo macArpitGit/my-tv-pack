@@ -1,0 +1,29 @@
+name: Daily 3AM IPTV Filter Update
+
+on:
+  schedule:
+    - cron: '30 21 * * *' # Fires every day at 9:30 PM UTC (3:00 AM IST)
+  workflow_dispatch: # Allows you to run it manually anytime for testing!
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-python-version: '3.x'
+
+      - name: Run Filter Script
+        run: python filter.py
+
+      - name: Commit and Push Clean Playlist
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add custom_tv.m3u
+          git commit -m "Automated Daily 3AM Filter Update" || exit 0
+          git push
