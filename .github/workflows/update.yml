@@ -12,16 +12,12 @@ jobs:
       contents: write
     steps:
       - name: Checkout Repository Code
-        uses: actions/checkout@v4
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+        uses: actions/checkout@v6
 
       - name: Setup Python environment
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
       - name: Run Filter Script
         run: python filter.py
