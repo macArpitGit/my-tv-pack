@@ -1,7 +1,7 @@
 import urllib.request
 
 # Define URLs
-MASTER_URL = "https://iptv-org.github.io/iptv/playlists/countries/in.m3u"
+MASTER_URL = "https://iptv-org.github.io/iptv/countries/in.m3u"
 WHITELIST_FILE = "whitelist.txt"
 OUTPUT_FILE = "custom_tv.m3u"
 
