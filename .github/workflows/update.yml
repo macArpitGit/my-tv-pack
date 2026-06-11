@@ -2,7 +2,7 @@ name: Daily 3AM IPTV Filter Update
 
 on:
   schedule:
-    - cron: '22 11 * * *' # Fires at 9:17 PM UTC (2:47 AM IST)
+    - cron: '22 13 * * *' # Fires at 9:17 PM UTC (2:47 AM IST)
   workflow_dispatch: # Allows you to run it manually anytime for testing!
 
 jobs:
