@@ -1,4 +1,12 @@
+cnn
 cbs news
+sky news
+euronews english
+nbc news now
+abc news live
+reuters
+trt world
+bloomberg
 bloomberg tv
 bbc news
 france 24 english
